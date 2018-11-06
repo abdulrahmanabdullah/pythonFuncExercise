@@ -1,0 +1,14 @@
+ ## Agenda ##
+     IPND Daily Work, Download and edit .
+     Variables
+     list
+     Data Type => List " List are mutable , And dynamic in python "
+     Functions :
+          - How Create Functions
+          - Name of functions
+          - Don't forget indention
+          - write something inside func block .
+          - Call function .
+     Loop => for loop & while loop .
+     Exercise :
+          - Blockly Maze OR guess number with computer OR calculator .

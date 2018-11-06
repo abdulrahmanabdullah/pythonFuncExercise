@@ -115,10 +115,10 @@ def round_five_with_if():
 
 
 if __name__ == "__main__":
-    # round_one()
-    # round_two()
-    # round_three()
-    # round_four()
+    round_one()
+    round_two()
+    round_three()
+    round_four()
     round_five_with_if()
     round_five_without_if()
     time.sleep(5)
