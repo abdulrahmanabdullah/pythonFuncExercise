@@ -1,4 +1,5 @@
 import random
+import sys
 
 
 greater_list = [] # empty list to save the greater numbers
@@ -7,6 +8,51 @@ all_numbers = [] # result of Multiply lists .
 # random number from 0 to 40
 def get_numbers():
     return random.randint(1,40) # return new random number when called .
+
+# check the number in range or not .
+def is_in_range(number):
+    return number in range(1,40) # true if number between 1 to 40
+
+
+user_attempt = 0 # this for calcuate the user rounds .
+def check_number(number1 , number2 ):
+    global user_attempt
+    user_attempt += 1 # increase value when function call .
+    if number1 == number2 and is_in_range(number1) :
+        print("great, attempts = ", user_attempt)
+        return True
+    elif number1 > number2 and is_in_range(number1):
+        print("higher")
+        return False
+    elif number1 < number2 and is_in_range(number1):
+        print("lower")
+        return False
+    else:
+        print("out of range")
+        return False
+
+
+def find_number():
+    number2 = get_numbers()
+    while True:
+        try:
+            number1 = int(input("enter your number\t "))
+            if check_number(number1, number2) == True :
+                 break
+        except ValueError:
+             print("enter number in range 0 to 40 ")
+
+
+def start_play():
+    print(" Guess a number from 1 to 40")
+    computer_number = get_numbers()
+    exit_game = input("Type z to exit OR enter to contuine .\t")
+    if exit_game == 'z':
+        print("Goodbye the number was ", computer_number)
+        sys.exit()
+    else:
+        find_number()
+
 
 # start play with computer.
 def play_with_number():
@@ -48,4 +94,5 @@ def multiply_list():
     print("Multiply this two list is = ",all_numbers)
 
 # code start from here .
-play_with_number()
+# play_with_number()
+start_play()
